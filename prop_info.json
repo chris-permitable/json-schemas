@@ -1,0 +1,40 @@
+{
+    "text": {
+        "format": {
+            "type": "json_schema",
+            "name": "property_info",
+            "strict": true,
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "street_address": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 2
+                    },
+                    "zip": {
+                        "type": "string",
+                        "pattern": "^[0-9]{5}$"
+                    },
+                    "county": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "street_address",
+                    "city",
+                    "state",
+                    "zip",
+                    "county"
+                ],
+                "additionalProperties": false
+            }
+        }
+    }
+}
